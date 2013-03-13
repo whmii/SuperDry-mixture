@@ -1,3 +1,0 @@
-[submodule "css"]
-	path = css
-	url = git://github.com/csswizardry/inuit.css.git
