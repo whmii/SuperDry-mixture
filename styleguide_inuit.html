@@ -10,6 +10,18 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
+		<style>
+			/* Styleguide specific */
+
+			@media screen {
+				body {
+					margin: auto;
+					max-width: 50em;
+					padding: 1.5em;
+				}
+			}
+
+		</style>
 
 		<script src="scripts/lib/modernizr.js"></script>		
 		<!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
@@ -45,6 +57,421 @@
 		       <li><code>            zoom:1;</code></li>
 		       <li><code>        }</code></li>
 		   </ol>
+			<h2>Marginalia</h2>
+		   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+
+<div class="marginalia">
+    <p class="marginalia__body--right  desk-one-fifth">This is some marginalia content.</p>
+</div>
+
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+
+<h2>Resposive Grids</h2>
+<div class="grid">
+    
+    <div class="grid__item  one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-third  lap-one-third  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-third  lap-two-thirds  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-third  lap-one-half  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-quarter  lap-one-half  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-quarter  lap-one-half  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-half  lap-one-half  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-third  lap-one-half  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-third  lap-one-half  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-third  lap-one-half  palm-one-whole">
+        <p class=demo-block>Foo</p>
+    </div><!--
+    
+ --><div class="grid__item  one-whole  lap-one-half">
+        <p class=demo-block>Foo</p>
+    </div>
+    
+</div>
+
+	<h2>Horisontal Rule</h2>
+
+	<hr>
+
+	<p>Foo bar baz</p>
+
+	<hr class=rule>
+
+	<p>Foo bar baz</p>
+
+	<hr class="rule  rule--dotted">
+
+	<ul>
+	    <li>Foo bar baz</li>
+	    <li>Bar baz foo</li>
+	    <li>Baz foo bar</li>
+	</ul>
+
+	<hr class="rule  rule--dashed">
+
+	<ul>
+	    <li>Foo bar baz</li>
+	    <li>Bar baz foo</li>
+	    <li>Baz foo bar</li>
+	</ul>
+
+	<hr class="rule  rule--ornament">
+
+	<ul>
+	    <li>Foo bar baz</li>
+	    <li>Bar baz foo</li>
+	    <li>Baz foo bar</li>
+	</ul>
+	<h2>Stats Item</h2>
+	<div class="stat-group  twitter-stats">
+	    <dl class=stat>
+	        <dt class=stat__title>Tweets</dt>
+	        <dd class=stat__value>27,740</dd>
+	    </dl>
+	    
+	    <dl class=stat>
+	        <dt class=stat__title>Following</dt>
+	        <dd class=stat__value>11,529</dd>
+	    </dl>
+
+	    <dl class=stat>
+	        <dt class=stat__title>Followers</dt>
+	        <dd class=stat__value>12,105</dd>
+	    </dl>
+	</div>
+	<h3>Usefull Stat Snippet</h3>
+		<div class="grid">
+		<code class="grid__item  one-half palm-one-whole">
+			.twitter-stats{<br>
+			    text-align:center;<br>
+			} <br>
+		</code><!-- 
+		 --><code class="grid__item  one-half palm-one-whole">
+		.twitter-stats .stat{<br>
+		    font-family:sans-serif;<br>
+		    border-left:1px solid #ccc;<br>
+		    padding-left:24px;<br>
+		}<br>
+		</code><!-- 
+		 --><code class="grid__item  one-half palm-one-whole">
+		.twitter-stats .stat:first-child{<br>
+		    border-left:none;<br>
+		    padding-left:0;<br>
+		}<br>
+		</code><!-- 
+		 --><code class="grid__item  one-half palm-one-whole">
+		    .twitter-stats .stat__title{
+		        font-size:0.75em;
+		        text-transform:uppercase;
+		    }<br>
+		    .twitter-stats .stat__value{
+		        font-weight:bold;
+		    }
+	  </code>
+	</div>
+	<h2>Breadcrumbs</h2>
+	<ol class="nav  breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">The Board</a></li>
+    <li class="current"><a href="#">Directors</a></li>
+	</ol>
+
+	<ol class="nav  breadcrumb--path">
+    <li class="breadcrumb__root"><a href="#">inuit.css</a></li>
+    <li><a href="#">inuit.css</a></li>
+    <li><a href="#">partials</a></li>
+    <li class="current"><a href="#">objects</a></li>
+	</ol>
+
+	<ol class="nav  breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li data-breadcrumb="|"><a href="#">About</a></li>
+    <li data-breadcrumb="|"><a href="#">The Board</a></li>
+    <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
+	</ol>
+
+	<ul class="nav  options">
+    <li><a href=#>Ignore</a></li><!--
+ --><li class=current><a href=#>Read</a></li><!--
+ --><li><a href=#>Delete</a></li>
+</ul>
+<h2>Options</h2>
+<ul class="nav  nav--fit  options">
+    <li class=one-third><a href=#>Ignore</a></li><!--
+ --><li class="current  one-third"><a href=#>Read</a></li><!--
+ --><li><a href=#>Delete</a></li>
+</ul>
+<h2>Forms</h2>
+<form action="#">
+    
+    <fieldset>
+
+        <legend>Personal details</legend>
+        
+        <ul class="form-fields">
+            
+            <li>
+                <label for=first-name>First name</label>
+                <input type="text" class="text-input" id="first-name">
+            </li>
+            
+            <li>
+                <label for="last-name">Last name</label>
+                <input type="text" class="text-input" id="last-name">
+            </li>
+            
+            <li>
+                <label for="email">Email</label>
+                <input type="email" class="text-input" id="email">
+                <small class="extra-help">.edu emails only</small>
+            </li>
+            
+        </ul>
+            
+    </fieldset>
+
+    <fieldset>
+        
+        <legend>Contacting you</legend>
+        
+        <p>We may contact you from time to time&hellip;</p>
+        
+        <ul class="form-fields">
+            
+            <li>
+                <span class="label">How would you like to be contacted?</span>
+                
+                <ul class="check-list">
+                    <li>
+                        <input type="checkbox" id="by-email"> <label for="by-email">By email</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="by-post"> <label for="by-post">By post</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="by-pigeon"> <label for="by-pigeon">By carrier pigeon</label>
+                    </li>
+                </ul>
+                
+            </li>
+            
+            <li>
+                <span class="label">How often would you like to be contacted?</span>
+                
+                <ul class="check-list  multi-list  two-cols">
+                    <li>
+                        <input type="radio" name="frequency" id="weekly"> <label for="weekly">Weekly</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="frequency" id="daily"> <label for="daily">Daily</label>
+                    </li>
+                </ul>
+                
+            </li>
+            
+        </ul>
+        
+    </fieldset>
+    
+</form>
+
+<h2>Block List</h2>
+<ul class="block-list">
+    <li>Foo</li>
+    <li>Foo <a href="#">Bar</a> Baz</li>
+    <li>Baz</li>
+    <li><a href="#" class="block-list__link">Foo Bar Baz</a></li>
+</ul>
+<h2>Pill & Lozenge</h2>
+<h1>This <span class=pill>here</span> is a pill!</h1>
+
+<p>This <strong class="pill  pill--error">here</strong> is also a pill!</p>
+
+<hr>
+
+<h1>This <span class=loz>here</span> is a lozenge!</h1>
+
+<p>This <strong class="loz  loz--error">here</strong> is also a lozenge!</p>
+<h2>Complex Links</h2>
+<a href="log-in" class="link-complex">
+    <strong class="link-complex__target">Log in</strong> to your account.
+</a>
+<h2>FlyOut</h2>
+
+<div class="flyout  demo-block">
+    Foo
+    <div class="flyout__content  demo-block">
+        <h1>Lorem</h1>
+        <p>Ipsum</p>
+    </div>
+</div>
+
+<h2>Media Object</h2>
+<div class="media">
+    <img src="http://placekitten.com/96/96" alt="" class="media__img">
+    <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
+<div class="media">
+    <img src="http://placekitten.com/96/96" alt="" class="media__img--rev">
+    <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<h2>Island</h2>
+<div class="island  demo-block">
+    I am boxed off.
+</div>
+
+<div class="islet  demo-block">
+    I am boxed off.
+</div>
+
+<h2>This or That</h2>
+<h3 class="this-or-this">
+    <a href="#" class="this-or-this__this two-fifths">
+        Free
+    </a>
+    <small class="this-or-this__or one-fifth">
+        or
+    </small>
+    <a href="#" class="this-or-this__this two-fifths">
+        Pro
+    </a>
+</h3>
+
+<div class="this-or-this  foo">
+    <p class="this-or-this__this  two-eighths">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    
+    <small class="this-or-this__or  one-eighth">or</small>
+    
+    <p class="this-or-this__this  two-eighths">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    
+    <small class="this-or-this__or  one-eighth">or</small>
+    
+    <p class="this-or-this__this  two-eighths">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+
+<h2>Nav Pagination</h2>
+<ol class="nav pagination">
+    <li class=pagination__first>First</li><!--
+ --><li class=pagination__prev>Previous</li><!--
+ --><li><a href=/page/1>1</a></li><!--
+ --><li><a href=/page/2>2</a></li><!--
+ --><li class=current><a href=/page/3>3</a></li><!--
+ --><li><a href=/page/4>4</a></li><!--
+ --><li><a href=/page/5>5</a></li><!--
+ --><li class=pagination__next><a href=/page/next>Next</a></li><!--
+ --><li class=pagination__last><a href=/page/last>Last</a></li>
+</ol>
+<h2>Split Menu</h2>
+<dl class=split>
+    <dt class=split__title>Burger and fries</dt>
+    <dd>&pound;5.99</dd>
+    <dt class=split__title>Fillet steak</dt>
+    <dd>&pound;19.99</dd>
+    <dt class=split__title>Ice cream</dt>
+    <dd>&pound;2.99</dd>
+</dl>
+
+<ol class=split>
+    <li><b class=split__title>1st place</b> Bob</li>
+    <li><b class=split__title>2nd place</b> Lilly</li>
+    <li><b class=split__title>3rd place</b> Ted</li>
+</ol>
+
+<h2>Matrix Object</h2>
+<ul class="matrix three-cols">
+    <li class=all-cols>Lorem</li>
+    <li>Ipsum <a href=#>dolor</a></li>
+    <li><a href=# class=matrix__link>Sit</a></li>
+    <li>Amet</li>
+    <li class=all-cols>Consectetuer</li>
+</ul>
+
+<ul class="multi-list four-cols">
+    <li>Lorem</li>
+    <li>Ipsum</li>
+    <li>Dolor</li>
+    <li>Sit</li>
+    <li>Sit</li>
+    <li>Dolor</li>
+    <li>Ipsum</li>
+    <li>Lorem</li>
+</ul>
+
+<h2>Navs</h2>
+<ul class=nav>
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+</ul>
+
+<ul class="nav  nav--stacked">
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+</ul>
+
+<ul class="nav  nav--banner">
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+</ul>
+
+<ul class="nav  nav--block">
+    <li><a href=#>Home</a></li><!--
+ --><li><a href=#>About</a></li><!--
+ --><li><a href=#>Portfolio</a></li><!--
+ --><li><a href=#>Contact</a></li>
+</ul>
+
+<ul class="nav  nav--fit">
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+</ul>
+
+<ul class="nav  nav--keywords">
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+</ul>
+
 		</section>
 		<section>
 			<h2>1. Headings and paragraphs</h2>
