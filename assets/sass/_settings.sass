@@ -1,0 +1,105 @@
+//========= Project Settings =========
+
+
+// Grid Variables
+
+$default-float: left !default
+$text-direction : ltr 
+$opposite-direction: right !default
+@if $text-direction == ltr 
+	$default-float: left
+	$opposite-direction: right
+@else 
+	$default-float: right
+	$opposite-direction: left
+
+
+
+
+
+//========= Media Queries =========
+
+$small-screen: 768px
+$medium-screen: 1280px
+$large-screen: 1440px
+
+// $screen: "only screen"
+// $small: "only screen and (min-width: #{$small-screen})"
+// $medium: "only screen and (min-width: #{$medium-screen})"
+// $large: "only screen and (min-width: #{$large-screen})"
+// $landscape: "only screen and (orientation: landscape)"
+// $portrait: "only screen and (orientation: portrait)"
+
+// Border Variables
+$global-radius: 4px
+$global-border-width: 1px
+
+
+
+//========= Color Palette =========
+
+$primary: #666
+$secondary: #222
+$tertiary: #444
+
+
+
+// Assign colours to variable roles
+
+$base-color: #2b2b2b
+$heading-color: $secondary
+$secondary-heading-color: $tertiary
+
+
+
+// Links
+
+$action: $primary
+$action-respond: $secondary
+$secondary-action: $action-respond
+$secondary-action-respond: $action
+
+
+
+// Alerts, errors and UI interface
+
+$alert: red
+$success: green
+
+
+
+
+// Fonts, measure, leading and typefaces
+// ------------------------------------------------------------
+
+
+// Fonts size and line height defaults for our calculations
+
+$base-font-size: 16px 				// Sets the browser default size. Shouldn't need to change this.
+$base-line-height: 8px					// Baseline grid. Set to a sensible, small size.
+$round-to-nearest-half-line: false  				// Round the line height to the nearest half line height. Off by default
+
+
+
+
+// Functions for px to em conversions
+// ------------------------------------------------------------
+
+@function emify($target, $context)
+	@if $target == 0 
+		@return 0
+	@return $target / $context + 0em
+
+// Make px to ems using base-font-size
+// echo as: font-size: em-font(#px)
+
+@function em-font($target, $context: $base-font-size)
+	@return emify($target, $context)
+
+
+
+// Make px to ems using base-line-height
+// echo as: font-size: em-base(#px)
+
+@function em-base($target, $context: $base-line-height)
+	@return emify($target, $context)

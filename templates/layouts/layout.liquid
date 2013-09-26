@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}Mixture + Compass{% endblock %}</title>
+		{{ "app.css" | asset_url | stylesheet_tag }}
+		<!-- TODO: Complete this project :) -->
+	</head>
+	<body>
+		<div class="wrap-page-navigation">
+			{% include "navigation" %}
+		</div>
+		<div class="wrap-page-content page-{{ mixture.url }}">
+
+			{% block content %}{% endblock %}
+		</div>
+		<div class="wrap-page-footer">
+			{% include "footer" %}
+		</div>
+	</body>
+</html>

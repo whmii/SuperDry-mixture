@@ -1,15 +1,22 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+/* TEAM */
+    
+    Company: Kern + Lead
+	
+	Designer: Will H McMahan
+	Contact: wmcmahan [at] kernandlead.com
 
-# TEAM
+	Front End Developer: Will H McMahan
+    Contact: wmcmahan [at] kernandlead.com
 
-    <name> -- <role> -- <twitter>
 
-# THANKS
+/* SITE */
+  
+  Standards: HTML5, CSS3
+  Components: jQuery, Orbit, Reveal
+  Software: Mixture.io, Sublime Text, Transmit, Git
 
-    <name>
 
-# TECHNOLOGY COLOPHON
+/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
+/* zurb.com */
+/* humanstxt.org */
 
-    HTML5, CSS3
-    jQuery, Modernizr

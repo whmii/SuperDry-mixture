@@ -1,0 +1,23 @@
+//========= Core Styles =========
+
+// Clearfix
+
+.clearfix
+	@include clearfix
+
+// Body Global Styles
+
+html 
+	font-size: 100%
+
+body 
+	color: $base-color
+	font-family: Helvetica, Arial, sans-serif
+	background-color: whitesmoke
+	padding: 3em
+
+a 
+	color: $action
+	@include force-wrap					// force text links to wrap
+	&:hover, &:focus, &:active 
+		color: $action-respond
