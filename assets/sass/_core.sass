@@ -27,6 +27,16 @@ a
 	&:hover, &:focus, &:active 
 		color: $action-respond
 
+// example grid styles
+
+.wrap-page-section
+	& > section 
+		@include grid-row
+		& > aside
+			@include grid-column(4)
+		& > article
+			@include grid-column(8)
+
 @media #{$screen}
 
 @media #{$small}
