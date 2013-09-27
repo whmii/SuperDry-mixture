@@ -13,26 +13,37 @@ $opposite-direction: right !default
 	$default-float: right
 	$opposite-direction: left
 
+$include-html-grid-classes: true
+$row-width: em-calc(1440)
+$column-gutter: em-calc(30)
+$total-columns: 12
 
 
 
+//========= Media Queries ========= 
 
-//========= Media Queries =========
 
-$small-screen: 768px
-$medium-screen: 1280px
-$large-screen: 1440px
+// Media Queries
+$small-screen: 768px !default
+$medium-screen: 1280px !default
+$large-screen: 1440px !default
 
-// $screen: "only screen"
-// $small: "only screen and (min-width: #{$small-screen})"
-// $medium: "only screen and (min-width: #{$medium-screen})"
-// $large: "only screen and (min-width: #{$large-screen})"
-// $landscape: "only screen and (orientation: landscape)"
-// $portrait: "only screen and (orientation: portrait)"
+$screen: "only screen" !default
+$small: "only screen and (min-width: #{$small-screen})" !default
+$medium: "only screen and (min-width:#{$medium-screen})" !default
+$large: "only screen and (min-width:#{$large-screen})" !default
+$landscape: "only screen and (orientation: landscape)" !default
+$portrait: "only screen and (orientation: portrait)" !default
 
-// Border Variables
-$global-radius: 4px
-$global-border-width: 1px
+
+//========= Typography =========
+
+
+// Fonts size and line height defaults for our calculations
+
+$base-font-size: 16px 				// Sets the browser default size. Shouldn't need to change this.
+$base-line-height: 8px					// Baseline grid. Set to a sensible, small size.
+$round-to-nearest-half-line: false  				// Round the line height to the nearest half line height. Off by default
 
 
 
@@ -67,23 +78,17 @@ $alert: red
 $success: green
 
 
+//========= Global Box =========
 
 
-// Fonts, measure, leading and typefaces
-// ------------------------------------------------------------
-
-
-// Fonts size and line height defaults for our calculations
-
-$base-font-size: 16px 				// Sets the browser default size. Shouldn't need to change this.
-$base-line-height: 8px					// Baseline grid. Set to a sensible, small size.
-$round-to-nearest-half-line: false  				// Round the line height to the nearest half line height. Off by default
+// Border Variables
+$global-radius: 4px
+$global-border-width: 1px
 
 
 
+//========= Conversion Functions =========
 
-// Functions for px to em conversions
-// ------------------------------------------------------------
 
 @function emify($target, $context)
 	@if $target == 0 
