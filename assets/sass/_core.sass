@@ -1,9 +1,14 @@
 //========= Core Styles =========
 
-// Clearfix
+// Clearfix & Box Sizing
 
 .clearfix
 	@include clearfix
+*,
+*:before,
+*:after
+	@include box-sizing(border-box)
+
 
 // Body Global Styles
 
@@ -21,3 +26,15 @@ a
 	@include force-wrap					// force text links to wrap
 	&:hover, &:focus, &:active 
 		color: $action-respond
+
+@media #{$screen}
+
+@media #{$small}
+
+@media #{$medium}
+
+@media #{$large}
+
+@media #{$landscape}
+
+@media #{$portrait}
