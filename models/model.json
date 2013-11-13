@@ -3,16 +3,12 @@
 	"modelDate": "11.14.2012",
 	"people": [
 		{
-			"name": "Neil Kinnish",
-			"twitter": "@neiltak"
+			"name": "Mixture.io",
+			"twitter": "@TeamMixture"
 		},
 		{
-			"name": "Mike Kus",
-			"twitter": "@mikekus"
-		},
-		{
-			"name": "Pete Nelson",
-			"twitter": "@petetak"
+			"name": "Will McMahan",
+			"twitter": "@whmii"
 		}
 	]
 }

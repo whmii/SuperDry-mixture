@@ -1,22 +1,23 @@
 /* TEAM */
     
-    Company: Kern + Lead
+    Company: 
 	
-	Designer: Will H McMahan
-	Contact: wmcmahan [at] kernandlead.com
+	Designer: 
+	Contact:  [at] 
 
-	Front End Developer: Will H McMahan
-    Contact: wmcmahan [at] kernandlead.com
+	Front End Developer: 
+    Contact:  [at] 
 
 
 /* SITE */
   
   Standards: HTML5, CSS3
-  Components: jQuery, Orbit, Reveal
+  Components: jQuery, Sass, Autoprefixer
   Software: Mixture.io, Sublime Text, Transmit, Git
 
 
-/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
-/* zurb.com */
-/* humanstxt.org */
+/* Zongzi 粽子 was made by Will McMahan @WHMII and derived with portions of Foundation by ZURB and Sassaparilla by fffunction, for Mixture */
+/* mcmahan.me */
 
+/* Mixture. The perfect front-end development tool for Mac & Windows. */
+/* Mixture.io */
