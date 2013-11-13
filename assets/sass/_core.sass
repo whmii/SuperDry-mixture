@@ -1,13 +1,16 @@
-//========= Core Styles =========
 
-// Clearfix & Box Sizing
+// Core Styles
+// ============================================================
+
+
+// ========= Clearfix & Box Sizing =========
 
 .clearfix
 	@include clearfix
-*,
-*:before,
-*:after
-	@include box-sizing(border-box)
+// *,
+// *:before,
+// *:after
+// 	@include box-sizing(border-box)		This is present in reset
 
 
 // Body Global Styles
@@ -23,9 +26,9 @@ body
 
 a 
 	color: $action
-	@include force-wrap					// force text links to wrap
 	&:hover, &:focus, &:active 
 		color: $action-respond
+
 
 // example grid styles
 

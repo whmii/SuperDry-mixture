@@ -1,8 +1,6 @@
 
-
-// SET UP YOUR FORMS IN THIS FILE
-
-// -----------------------------------------------------------
+// Forms Styles
+// ============================================================
 
 
 label, select {
@@ -10,8 +8,6 @@ label, select {
 }
 
 input[type="search"] {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
 	-webkit-appearance: textfield;
 	box-sizing: content-box;
 }
@@ -40,12 +36,7 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"] {
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
 	transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
