@@ -3,14 +3,17 @@
 // ============================================================
 
 
-// ========= Clearfix & Box Sizing =========
+// ========= Clearfix =========
 
 .clearfix
-	@include clearfix
-// *,
-// *:before,
-// *:after
-// 	@include box-sizing(border-box)		This is present in reset
+	zoom: 1
+	&:before, &:after
+		content: "\0020"
+		display: block
+		height: 0
+		overflow: hidden
+	&:after
+		clear: both
 
 
 // Body Global Styles

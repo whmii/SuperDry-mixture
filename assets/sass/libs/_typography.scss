@@ -5,52 +5,43 @@
 
 // ========= Default Sizing and Spacing =========
 
+// h1
 
-h1 { 
-} 
-			
-h2 { 
-}
+// h2
 
-h3 { 
-} 
+// h3
 
-h4 { 
-} 
+// h4
 
-h5 { 
-} 
+// h5
 
-h6 {
-} 	
+// h6
 
-p, pre, label { 
-}
+// p, pre, label
 
-ol, ul {
-}
+// ol, ul
 
-li {
-	line-height: auto;
-}
+// li
+// 	line-height: auto
 
 
 // ========= Core Typography =========
 
-ul 			{  }
-ol 			{  }							// Include ordered list from mixins by default
-strong, b 	{ font-weight: 600; }
-em, i, q 	{ font-style: italic; }
+// ul
+// ol
 
-blockquote {
-	padding-left: 1rem;
-	border-left: 0.25 solid $secondary;
-	line-height: normal;
-	margin: 0;
-	p {
-		font-style: italic;
-		margin: 0;
-	}
-}
+strong, b
+	font-weight: 600
 
+em, i, q
+	font-style: italic
+
+blockquote
+	padding-left: 1rem
+	border-left: 0.25 solid $secondary
+	line-height: normal
+	margin: 0
+	p
+		font-style: italic
+		margin: 0
 
