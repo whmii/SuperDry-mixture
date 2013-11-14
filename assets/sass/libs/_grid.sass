@@ -1,11 +1,7 @@
 
 // Grid Styles
 // ============================================================
-
-
-//
-// @description
-// With a default "small-#" grid, a 640-1024px "medium-#" grid, and a 1024+ "large-#" grid, we've got you covered for any layout you can think of.
+// With a default "small-#" grid, a 640-1024px "medium-#" grid, and a 1024+ "large-#" grid
 //
 
 //
@@ -29,7 +25,7 @@ $total-columns: 12 !default
 	#{$default-float}: auto
 
 //
-// Grid Mixins
+// ========= Grid Mixins ========
 //
 
 // Create default, nested, and collapsed rows
@@ -42,22 +38,23 @@ $total-columns: 12 !default
 		max-width: none
 		width: auto
 
-// use @include grid-row(collapse) to collapsed a container row margins
-	@else if $behavior == collapse				
+	
+	@else if $behavior == collapse
+		// use @include grid-row(collapse) to collapsed a container row margins
 		margin-#{$default-float}: 0
 		margin-#{$opposite-direction}: 0
 		max-width: $row-width
 		width: 100%
 
-// use @include grid-row(nest-collapse) to collapse outer margins on a nested row
-	@else if $behavior == nest-collapse			
+	@else if $behavior == nest-collapse
+		// use @include grid-row(nest-collapse) to collapse outer margins on a nested row
 		margin-#{$default-float}: 0
 		margin-#{$opposite-direction}: 0
 		max-width: none
 		width: auto
 
-// use @include grid-row to use a container row
 	@else
+		// use @include grid-row to use a container row
 		margin-#{$default-float}: auto
 		margin-#{$opposite-direction}: auto
 		margin-top: 0
@@ -71,42 +68,42 @@ $total-columns: 12 !default
 // For creating columns - @include these inside a media query to control small vs. large grid layouts
 @mixin grid-column($columns:false, $last-column:false, $center:false, $offset:false, $push:false, $pull:false, $collapse:false, $float:true, $include-position-relative: false)
 
-// If collapsed, get rid of gutter padding
 	@if $collapse
+		// If collapsed, get rid of gutter padding
 		padding-left: 0
 		padding-right: 0
 
-// Gutter padding whenever a column isn't set to collapse (use $collapse:null to do nothing)
 	@else if $collapse == false
+		// Gutter padding whenever a column isn't set to collapse (use $collapse:null to do nothing)
 		padding-left: $column-gutter / 2
 		padding-right: $column-gutter / 2
 
-// If a column number is given, calculate width
 	@if $columns
+		// If a column number is given, calculate width
 		width: gridCalc($columns, $total-columns)
 
-// If last column, float naturally instead of to the right
 		@if $last-column
+			// If last column, float naturally instead of to the right
 			float: $opposite-direction
 
-// If offset, calculate appropriate margins
 	@if $offset
+		// If offset, calculate appropriate margins
 		margin-#{$default-float}: gridCalc($offset, $total-columns)
 
-// Source Ordering, adds left/right depending on which you use.
+		// Source Ordering, adds left/right depending on which you use.
 
 
-// grid push/pull (relative positioning) is experimental
-// proceed with caution
+		// grid push/pull (relative positioning) is experimental
+		// proceed with caution
 
 
-	@if $push
-		#{$default-float}: gridCalc($push, $total-columns) #{$opposite-direction}: auto
-	@if $pull
-		#{$opposite-direction}: gridCalc($pull, $total-columns) #{$default-float}: auto
+	// @if $push
+	// 	#{$default-float}: gridCalc($push, $total-columns) #{$opposite-direction}: auto
+	// @if $pull
+	// 	#{$opposite-direction}: gridCalc($pull, $total-columns) #{$default-float}: auto
 
-// If centered, get rid of float and add appropriate margins
 	@if $center
+		// If centered, get rid of float and add appropriate margins
 		margin-#{$default-float}: auto
 		margin-#{$opposite-direction}: auto
 		float: none !important
@@ -119,13 +116,13 @@ $total-columns: 12 !default
 		@else
 			float: none
 
-// This helps us not need to repeat "position:relative" everywehere
 	@if $include-position-relative
+		// This helps us not need to repeat "position:relative" everywehere
 		position: relative
 
 
 @if $include-html-grid-classes != false
-	/* Grid HTML Classes */
+	// Grid HTML Classes
 	.row
 		@include grid-row
 
@@ -198,8 +195,10 @@ $total-columns: 12 !default
 				@include grid-column($offset:$i, $collapse:null,$float:false)
 
 		@for $i from 1 through $total-columns - 1
-			.large-push#{-$i} { @include grid-column($push:$i, $collapse:null, $float:false)
-			.large-pull#{-$i} { @include grid-column($pull:$i, $collapse:null, $float:false)
+			.large-push#{-$i}
+				@include grid-column($push:$i, $collapse:null, $float:false)
+			.large-pull#{-$i}
+				@include grid-column($pull:$i, $collapse:null, $float:false)
 
 		.column.large-centered,
 		.columns.large-centered
