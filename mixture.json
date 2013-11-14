@@ -6,7 +6,7 @@
 	"preprocessorLocations": "assets",
 	"preprocessorScriptOutput": "assets/scripts",
 	"preprocessorStyleOutput": "assets/css",
-	"projectDescription": "Quick start Compass with Mixture, Compass is an open-source CSS Authoring Framework.",
+	"projectDescription": "A quick and tasty start with Mixture, Sass, and AutoPrefixer.",
 	"projectName": "Zongzi",
 	"publishedId": null,
 	"serverHostname": null,
