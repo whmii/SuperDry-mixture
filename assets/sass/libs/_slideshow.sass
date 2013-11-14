@@ -1,0 +1,68 @@
+/*! http://responsiveslides.com v1.54 by @viljamis */
+.rslides_container
+	position: relative
+	
+	.rslides
+		position: relative
+		list-style: none
+		overflow: hidden
+		width: 100%
+		padding: 0
+		margin: 0
+
+		li
+			-webkit-backface-visibility: hidden
+			position: absolute
+			display: none
+			width: 100%
+			left: 0
+			top: 0
+
+		li:first-child
+			position: relative
+			display: block
+			float: left
+
+		img
+			display: block
+			height: auto
+			float: left
+			width: 100%
+			border: 0
+
+	a.centered-btns_nav
+		position: absolute
+		width: em-calc(40px)
+		height: em-calc(90px)
+		padding: em-calc(10px)
+		top: 50%
+		z-index: 100
+		cursor: pointer
+		background: url('../img/slideshow-arrow.png') no-repeat 0
+		opacity: 0
+		display: block
+		transition: 300ms all
+		margin-top: em-calc(-45px)
+ 
+		&.prev 
+			background-position: 0.625em 0.625em
+			left: 1em
+
+ 
+ 
+		&.next 
+			background-position: -20px 0.625em
+			right: 1em
+
+
+
+.rslides_container:hover
+	a.centered-btns_nav
+		opacity: 0.5
+
+		
+		&.prev:active
+			transform: translateX( 0.25em )
+		
+		&.next:active
+			transform: translateX( 0.25em )

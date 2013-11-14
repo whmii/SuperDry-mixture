@@ -2,8 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>{% block title %}Mixture + Compass{% endblock %}</title>
+		<title>Zongzi 粽子 {% block title %}{% endblock %}</title>
 		{{ "app.css" | asset_url | stylesheet_tag }}
+		{{ "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" | script_tag }}
 		<!-- TODO: Complete this project :) -->
 	</head>
 	<body>
@@ -16,6 +17,7 @@
 		</div>
 		<div class="wrap-page-footer">
 			{% include "footer" %}
+			{% include "scripts" %}
 		</div>
 	</body>
 </html>
