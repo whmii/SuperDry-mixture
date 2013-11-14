@@ -24,6 +24,7 @@ html
 body 
 	color: $base-color
 	font-family: Helvetica, Arial, sans-serif
+	font-size: $base-font-size
 	background-color: whitesmoke
 	padding: 3em
 
@@ -36,12 +37,13 @@ a
 // example grid styles
 
 .wrap-page-section
+	color: blue
 	& > section 
 		@include grid-row
 		& > aside
-			@include grid-column(4)
+			@include grid-column($columns:4)
 		& > article
-			@include grid-column(8)
+			@include grid-column($columns:8)
 
 @media #{$screen}
 
