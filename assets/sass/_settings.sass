@@ -3,7 +3,7 @@
 // ============================================================
 
 
-//========= Typography =========
+//========= Typography & Metrics =========
 
 // $base-line-height is 24px while $base-font-size is 16px
 $base-line-height: 150% !default
@@ -13,10 +13,14 @@ $em-base: 16px !default
 
 // Fonts size and line height defaults for our calculations
 
-$base-font-size: 16px 				// Sets the browser default size. Shouldn't need to change this.
-$base-line-height: 8px					// Baseline grid. Set to a sensible, small size.
-$round-to-nearest-half-line: false  				// Round the line height to the nearest half line height. Off by default
+$base-font-size: 1em 				// Sets the browser default size. Shouldn't need to change this.
+$base-line-height: 1.5
 
+
+// Font sizes are then abstracted to base global spacing behaviors
+
+$base-factor-vertical: $base-line-height
+$base-font-size: 16px
 
 
 //========= Conversion Functions =========
@@ -65,7 +69,7 @@ $round-to-nearest-half-line: false  				// Round the line height to the nearest 
 	@return emify($target, $context)
 
 
-// Grid Variables
+//========= Grid Variables =========
 
 $default-float: left !default
 $text-direction : ltr 
@@ -133,10 +137,19 @@ $alert: red
 $success: green
 
 
-//========= Global Box =========
+//========= Block Settings =========
+
+
+// Core Spacing Variables
+
+$coral: 1rem
+$reef: 2rem
+$island: 4rem
+$continent: 8rem
 
 
 // Border Variables
-$global-radius: 4px
+
+$global-radius: 4px				// I aint afraid of no' pixels!
 $global-border-width: 1px
 
