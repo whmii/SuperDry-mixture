@@ -13,22 +13,27 @@ $em-base: 16px !default
 
 // Fonts size and line height defaults for our calculations
 
-$base-font-size: 1em 				// Sets the browser default size. Shouldn't need to change this.
+$base-font-size: 1em 				// Browser default size
 $base-line-height: 1.5
 
 
-// Font sizes are then abstracted to base global spacing behaviors
+// Font sizes are then abstracted to global spacing behaviors
 
 $base-factor-vertical: $base-line-height
 $base-font-size: 16px
 
 
+// Small Print
+
+$small-font-size: 65%
+
+
 //========= Conversion Functions =========
 
 // It strips the unit of measure and returns it
+
 @function strip-unit($num)
 	@return $num / ($num * 0 + 1)
-
 
 @function convert-to-em($value, $base-value: $em-base)  
 	$value: strip-unit($value) / strip-unit($base-value) * 1em
@@ -46,8 +51,6 @@ $base-font-size: 16px
 	@for $i from 1 through $max
 		$emValues: append($emValues, convert-to-em(nth($values, $i), $base-value))
 	@return $emValues
-
-
 
 @function emify($target, $context)
 	@if $target == 0 
@@ -81,7 +84,7 @@ $opposite-direction: right !default
 	$default-float: right
 	$opposite-direction: left
 
-$include-html-grid-classes: true
+$include-html-grid-classes: false
 $row-width: em-calc(1440)
 $column-gutter: em-calc(30)
 $total-columns: 12

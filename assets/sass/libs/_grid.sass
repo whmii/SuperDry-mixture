@@ -1,34 +1,34 @@
 
 // Grid Styles
 // ============================================================
-// With a default "small-#" grid, a 640-1024px "medium-#" grid, and a 1024+ "large-#" grid
-//
 
-//
+
 // Grid Variables
-//
+
 $include-html-grid-classes: true !default
 $row-width: em-calc(1000) !default
 $column-gutter: em-calc(30) !default
 $total-columns: 12 !default
 
-//
+
 // Grid Calc Function
-//
+
 @function gridCalc($colNumber, $totalColumns)
 	@return percentage(($colNumber / $totalColumns))
 
+
 // Right and Left "auto" for grid
+
 %right-auto 
 	#{$opposite-direction}: auto
 %left-auto
 	#{$default-float}: auto
 
-//
+
 // ========= Grid Mixins ========
-//
 
 // Create default, nested, and collapsed rows
+
 @mixin grid-row($behavior: false)
 
 	// use @include grid-row(nest) to include a nested row
@@ -66,6 +66,7 @@ $total-columns: 12 !default
 
 
 // For creating columns - @include these inside a media query to control small vs. large grid layouts
+
 @mixin grid-column($columns:false, $last-column:false, $center:false, $offset:false, $push:false, $pull:false, $collapse:false, $float:true, $include-position-relative: false)
 
 	@if $collapse
