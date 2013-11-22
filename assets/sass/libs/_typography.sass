@@ -21,14 +21,15 @@
 
 // ol, ul
 
-// li
-// 	line-height: auto
+li
+	line-height: auto
+
+small
+	font-size: $small-font-size
 
 
 // ========= Core Typography =========
 
-// ul
-// ol
 
 strong, b
 	font-weight: 600
@@ -45,3 +46,26 @@ blockquote
 		font-style: italic
 		margin: 0
 
+// Lining Lists
+
+// Lining declares an inline list for ul, ol and dl
+
+@mixin lining($type:ul)
+	@if ($type == ul)
+		list-style: none
+		li
+			display: inline-block
+	@if ($type == ol)
+		// bullets are removed for inline ul but not for ol!
+		li
+			display: inline-block
+	@if ($type == dl)
+		dt,dd
+			display: inline
+			margin: 0
+		
+		dt,dd
+			& + dt
+				&:before
+					content: "\A"
+					white-space: pre
