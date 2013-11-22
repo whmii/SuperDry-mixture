@@ -1,0 +1,75 @@
+
+// Core Component Styles
+// ============================================================
+// These are styles for "components" which could be used to build buttons, alerts, tags, breadcrumbs and more!
+
+
+// ========= Component Settings =========
+
+$orientation: $horizontal
+
+
+// ========= Component Mixin =========
+
+@mixin component( $orientation: $horizontal, $factor:1, $margin:true)
+	
+	@if $orientation == left or $orientation == true 
+		padding: $base-line-height 
+
+		@if $margin == true
+
+		
+	@else if $orientation == right or $orientation == false 
+		float: $opposite-direction
+
+
+
+	@if $center
+		// If centered, get rid of float and add appropriate margins
+		margin-#{$default-float}: auto
+		margin-#{$opposite-direction}: auto
+		float: none !important
+
+	@if $factor
+
+
+	@if $float
+		@if $float == left or $float == true 
+			float: $default-float
+		@else if $float == right
+			float: $opposite-direction
+		@else
+			float: none
+
+
+// ========= Helper Styles =========
+
+// Spacing Helpers
+
+%coral
+	margin-top: $coral
+	margin-bottom: $coral
+
+%reef
+	margin-top: $reef
+	margin-bottom: $reef
+
+%island
+	margin-top: $island
+	margin-bottom: $island
+
+%continent
+	margin-top: $continent
+	margin-bottom: $continent
+
+.flush-bottom
+	margin-bottom: 0 !important
+
+.flush-top
+	margin-top: 0 !important
+
+
+// Style Helpers
+
+%radius
+	border-radus: $global-radius
