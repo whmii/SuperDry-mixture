@@ -6,40 +6,58 @@
 
 // ========= Component Settings =========
 
-$orientation: $horizontal
+// Use factors to increase or decrease spacing
+// Use whole numbers for factors
+$base-factor: 1 !default
 
+
+
+@function component-ratio( $vertical:$base-line-height, $horizontal:$column-gutter)
+	@return (strip-unit($vertical)/strip-unit($horizontal))
+
+.randomthing
+	border-radus: component-ratio()
+	base-line-height: $base-line-height
+	column-gutter: $column-gutter
+
+
+
+
+
+// $column-gutter  /  $base-line-height
 
 // ========= Component Mixin =========
 
-@mixin component( $orientation: $horizontal, $factor:1, $margin:true)
-	
-	@if $orientation == left or $orientation == true 
-		padding: $base-line-height 
+// @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
+		
+// 		padding-left: $base-spacing-metric
+// 		padding-right: $base-spacing-metric
+// 		padding-top: 
 
-		@if $margin == true
+// 		@if $margin == true
 
 		
-	@else if $orientation == right or $orientation == false 
-		float: $opposite-direction
+// 	@else if $orientation == vertical or $orientation == false 
+// 		float: $opposite-direction
 
 
 
-	@if $center
-		// If centered, get rid of float and add appropriate margins
-		margin-#{$default-float}: auto
-		margin-#{$opposite-direction}: auto
-		float: none !important
+// 	@if $center
+// 		// If centered, get rid of float and add appropriate margins
+// 		margin-#{$default-float}: auto
+// 		margin-#{$opposite-direction}: auto
+// 		float: none !important
 
-	@if $factor
+// 	@if $factor
 
 
-	@if $float
-		@if $float == left or $float == true 
-			float: $default-float
-		@else if $float == right
-			float: $opposite-direction
-		@else
-			float: none
+// 	@if $float
+// 		@if $float == left or $float == true 
+// 			float: $default-float
+// 		@else if $float == right
+// 			float: $opposite-direction
+// 		@else
+// 			float: none
 
 
 // ========= Helper Styles =========
