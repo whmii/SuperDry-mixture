@@ -9,17 +9,23 @@
 // Use factors to increase or decrease spacing
 // Use whole numbers for factors
 $base-factor: 1 !default
-
+// column-gutter: 1.875em
 
 
 @function component-ratio( $vertical:$base-line-height, $horizontal:$column-gutter)
+	@if unit($horizontal) != "em" or "rem"	// Sanity check in case margins were not defined in ems 
+	
+		$horizontal: em-calc($horizontal)
 	@return (strip-unit($vertical)/strip-unit($horizontal))
+
+
 
 .randomthing
 	border-radus: component-ratio()
+	border-radus: component-ratio(1.5,35px)
 	base-line-height: $base-line-height
 	column-gutter: $column-gutter
-
+	test: unit(12em)
 
 
 
@@ -29,6 +35,8 @@ $base-factor: 1 !default
 // ========= Component Mixin =========
 
 // @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
+// @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
+
 		
 // 		padding-left: $base-spacing-metric
 // 		padding-right: $base-spacing-metric
