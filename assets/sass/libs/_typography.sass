@@ -5,17 +5,7 @@
 
 // ========= Default Sizing and Spacing =========
 
-// h1
-
-// h2
-
-// h3
-
-// h4
-
-// h5
-
-// h6
+// h1, h2, h3, h4, h5, h6
 
 // p, pre, label
 
@@ -46,7 +36,7 @@ blockquote
 		font-style: italic
 		margin: 0
 
-// Lining Lists
+// ========= Lining Lists =========
 
 // Lining declares an inline list for ul, ol and dl
 
@@ -69,3 +59,24 @@ blockquote
 				&:before
 					content: "\A"
 					white-space: pre
+
+// Mixins for list style types
+
+@mixin unordered
+	list-style-position: outside
+	list-style-type: disc
+
+@mixin unordered-inside 
+	list-style-position: inside
+	list-style-type: disc
+
+@mixin ordered
+	list-style-position: outside
+	list-style-type: decimal
+
+@mixin ordered-inside
+	list-style-position: inside
+	list-style-type: decimal
+
+@mixin nobullet
+	list-style-type: none
