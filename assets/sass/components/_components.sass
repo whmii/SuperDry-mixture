@@ -23,11 +23,12 @@ $base-factor-modifier: 0.5 !default
 		@return (1)
 	@if $factor > 0
 		@if $factor < 1
-			@return ($factor * $modifier + 1)
+			@return ($factor * $modifier) //optional entry of negitive values
 		@else
 			@return ($factor * $modifier + 1)
-
-
+	@if $factor < 0
+		$value: abs($factor) / 2 * $modifier +1
+		@return (1 / $value)
 
 
 // Ratio
@@ -48,7 +49,7 @@ $base-component-ratio: component-ratio()
 	base-line-height: $base-line-height
 	column-gutter: $column-gutter
 	test: unit(12em)
-	text-component: component-factor(3)
+	text-component: component-factor(1)
 
 
 
