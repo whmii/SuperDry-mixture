@@ -2,22 +2,44 @@
 // Core Component Styles
 // ============================================================
 // These are styles for "components" which could be used to build buttons, alerts, tags, breadcrumbs and more!
+// Components have 2 parts
+// • The Factor determines the spacing and size of the unit (indipendent of font size) 
+// • The Ratio which determines the reltionship between vertical and horizontal spacing
 
 
 // ========= Component Settings =========
 
-// Use factors to increase or decrease spacing
+
+// Factor
+
+// Use factors to increase or decrease spacing in and around a component
 // Use whole numbers for factors
-$base-factor: 1 !default
-// column-gutter: 1.875em
+
+$base-comonent-factor: 0 !default
+$base-factor-modifier: 0.5 !default
+
+@function component-factor($factor: $base-component-factor, $modifier: $base-factor-modifier)
+	@if $factor == 0
+		@return (1)
+	@if $factor > 0
+		@if $factor < 1
+			@return ($factor * $modifier + 1)
+		@else
+			@return ($factor * $modifier + 1)
 
 
-@function component-ratio( $vertical:$base-line-height, $horizontal:$column-gutter)
-	@if unit($horizontal) != "em" or "rem"	// Sanity check in case margins were not defined in ems 
-	
+
+
+// Ratio
+
+// $column-gutter  /  $base-line-height
+
+@function component-ratio($vertical: $base-line-height, $horizontal: $column-gutter)
+	@if unit($horizontal) != "em" or "rem"	// Sanity check in case margins were not defined in ems
 		$horizontal: em-calc($horizontal)
 	@return (strip-unit($vertical)/strip-unit($horizontal))
 
+$base-component-ratio: component-ratio()
 
 
 .randomthing
@@ -26,17 +48,17 @@ $base-factor: 1 !default
 	base-line-height: $base-line-height
 	column-gutter: $column-gutter
 	test: unit(12em)
+	text-component: component-factor(3)
 
 
 
 
-// $column-gutter  /  $base-line-height
 
 // ========= Component Mixin =========
 
 // @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
-// @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
-
+@mixin component($factor: $base-component-factor, $ratio: $base-component-ratio, $margin: true)
+	$horizontal: $base-line-height
 		
 // 		padding-left: $base-spacing-metric
 // 		padding-right: $base-spacing-metric
