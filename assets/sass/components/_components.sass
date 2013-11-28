@@ -59,11 +59,13 @@ $base-component-ratio: component-ratio()
 		$vert: ($component-unit-horz * $ratio) * $local-factor
 		padding-top: $vert
 		padding-bottom: $vert
-		@if $margin != false
-			@if $margin != top
-				margin-bottom: $vert
-			@if $margin != bottom
-				margin-top: $vert
+		@if $margin == auto
+		@if $margin != auto
+			@if $margin != false
+				@if $margin != top
+					margin-bottom: $vert
+				@if $margin != bottom
+					margin-top: $vert
 		@if $margin == false
 			margin-top: 0
 			margin-bottom: 0
@@ -71,11 +73,13 @@ $base-component-ratio: component-ratio()
 		$vert: ($component-unit-horz * component-ratio()) * $local-factor
 		padding-top: $vert
 		padding-bottom: $vert
-		@if $margin != false
-			@if $margin != top
-				margin-bottom: $vert
-			@if $margin != bottom
-				margin-top: $vert
+		@if $margin == auto
+		@if $margin != auto
+			@if $margin != false
+				@if $margin != top
+					margin-bottom: $vert
+				@if $margin != bottom
+					margin-top: $vert
 		@if $margin == false
 			margin-top: 0
 			margin-bottom: 0
