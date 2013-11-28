@@ -45,19 +45,6 @@ $base-factor-modifier: 0.5 !default
 $base-component-ratio: component-ratio()
 
 
-.randomthing
-	border-radus: component-ratio()
-	border-radus: component-ratio(1.5,35px)
-	base-line-height: $base-line-height
-	column-gutter: $column-gutter
-	test: unit(12em)
-	text-component: component-factor(1)
-	base-component: $base-component-ratio
-
-
-
-
-
 // ========= Component Mixin =========
 
 // @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
@@ -93,43 +80,9 @@ $base-component-ratio: component-ratio()
 			margin-top: 0
 			margin-bottom: 0
 
-	// padding-left: 
-	// padding-right
-	// padding-top: 
-	// padding-bottom: 
 
 .otherrandomthing
 	@include component()
-
-
-// 		padding-left: $base-spacing-metric
-// 		padding-right: $base-spacing-metric
-// 		padding-top: 
-
-// 		@if $margin == true
-
-		
-// 	@else if $orientation == vertical or $orientation == false 
-// 		float: $opposite-direction
-
-
-
-// 	@if $center
-// 		// If centered, get rid of float and add appropriate margins
-// 		margin-#{$default-float}: auto
-// 		margin-#{$opposite-direction}: auto
-// 		float: none !important
-
-// 	@if $factor
-
-
-// 	@if $float
-// 		@if $float == left or $float == true 
-// 			float: $default-float
-// 		@else if $float == right
-// 			float: $opposite-direction
-// 		@else
-// 			float: none
 
 
 // ========= Helper Styles =========
