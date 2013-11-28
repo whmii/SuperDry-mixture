@@ -9,13 +9,15 @@
 
 // ========= Component Settings =========
 
+$component-unit-vert: $base-line-height
+$component-unit-horz: $column-gutter
 
 // Factor
 
 // Use factors to increase or decrease spacing in and around a component
 // Use whole numbers for factors
 
-$base-comonent-factor: 0 !default
+$base-component-factor: 0 !default
 $base-factor-modifier: 0.5 !default
 
 @function component-factor($factor: $base-component-factor, $modifier: $base-factor-modifier)
@@ -35,8 +37,8 @@ $base-factor-modifier: 0.5 !default
 
 // $column-gutter  /  $base-line-height
 
-@function component-ratio($vertical: $base-line-height, $horizontal: $column-gutter)
-	@if unit($horizontal) != "em" or "rem"	// Sanity check in case margins were not defined in ems
+@function component-ratio($vertical: $component-unit-vert, $horizontal: $component-unit-horz)
+	@if unit($horizontal) != "em" 	// Sanity check in case margins were not defined in ems
 		$horizontal: em-calc($horizontal)
 	@return (strip-unit($vertical)/strip-unit($horizontal))
 
@@ -50,6 +52,7 @@ $base-component-ratio: component-ratio()
 	column-gutter: $column-gutter
 	test: unit(12em)
 	text-component: component-factor(1)
+	base-component: $base-component-ratio
 
 
 
@@ -59,8 +62,42 @@ $base-component-ratio: component-ratio()
 
 // @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
 @mixin component($factor: $base-component-factor, $ratio: $base-component-ratio, $margin: true)
-	$horizontal: $base-line-height
-		
+	@if $ratio != $base-component-ratio
+		$local-factor: component-factor($factor)
+		$horz: $component-unit-horz * $local-factor
+		$vert: ($component-unit-horz * $ratio) * $local-factor
+		padding-left: $horz
+		padding-right: $horz
+		padding-top: $vert
+		padding-bottom: $vert
+		@if $margin != false
+			@if $margin != top
+				margin-bottom: $vert
+			@if $margin != bottom
+				margin-top: $vert
+	@else
+		$local-factor: component-factor($factor)
+		$horz: ($component-unit-horz * $local-factor)
+		$vert: (($component-unit-horz * component-ratio()) * $local-factor)
+		padding-left: $horz
+		padding-right: $horz
+		padding-top: $vert
+		padding-bottom: $vert
+		@if $margin != false
+			@if $margin != top
+				margin-bottom: $vert
+			@if $margin != bottom
+				margin-top: $vert
+
+	// padding-left: 
+	// padding-right
+	// padding-top: 
+	// padding-bottom: 
+
+.otherrandomthing
+	@include component()
+
+
 // 		padding-left: $base-spacing-metric
 // 		padding-right: $base-spacing-metric
 // 		padding-top: 
