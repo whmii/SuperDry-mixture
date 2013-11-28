@@ -1,0 +1,20 @@
+
+// Button Styles
+// ============================================================
+
+// ========= Core Button Styles =========
+
+.button
+	display: inline-block
+	@include component()
+	background-color: $primary
+	&.alert
+		background-color: $alert
+	&.alert
+		background-color: $alert
+
+.button.large
+	display: inline-block
+	@include component(3)
+	background-color: $primary
+
