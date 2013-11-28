@@ -62,12 +62,14 @@ $base-component-ratio: component-ratio()
 
 // @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
 @mixin component($factor: $base-component-factor, $ratio: $base-component-ratio, $margin: true)
+	$local-factor: component-factor($factor)
+	$horz: $component-unit-horz * $local-factor
+	padding-left: $horz
+	padding-right: $horz
 	@if $ratio != $base-component-ratio
 		$local-factor: component-factor($factor)
 		$horz: $component-unit-horz * $local-factor
 		$vert: ($component-unit-horz * $ratio) * $local-factor
-		padding-left: $horz
-		padding-right: $horz
 		padding-top: $vert
 		padding-bottom: $vert
 		@if $margin != false
@@ -75,12 +77,11 @@ $base-component-ratio: component-ratio()
 				margin-bottom: $vert
 			@if $margin != bottom
 				margin-top: $vert
+		@if $margin == false
+			margin-top: 0
+			margin-bottom: 0
 	@else
-		$local-factor: component-factor($factor)
-		$horz: ($component-unit-horz * $local-factor)
-		$vert: (($component-unit-horz * component-ratio()) * $local-factor)
-		padding-left: $horz
-		padding-right: $horz
+		$vert: ($component-unit-horz * component-ratio()) * $local-factor
 		padding-top: $vert
 		padding-bottom: $vert
 		@if $margin != false
@@ -88,6 +89,9 @@ $base-component-ratio: component-ratio()
 				margin-bottom: $vert
 			@if $margin != bottom
 				margin-top: $vert
+		@if $margin == false
+			margin-top: 0
+			margin-bottom: 0
 
 	// padding-left: 
 	// padding-right
