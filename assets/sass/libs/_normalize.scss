@@ -38,10 +38,6 @@ $legacy-support-for-ie6: false !default; // Override default set in Compass' Sup
 // Set this to true to add support for IE 7.
 $legacy-support-for-ie7: false !default; // Override default set in Compass' Support partial.
 
-// After the default variables are set, import the required Compass partials.
-@import "compass/support";
-@import "compass/css3/box-sizing";
-@import "compass/typography/vertical_rhythm";
 
 
 /* ==========================================================================
@@ -75,10 +71,6 @@ audio,
 canvas,
 video {
     display: inline-block;
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-        *display: inline;
-        *zoom: 1;
-    }
 }
 
 /**
@@ -115,16 +107,8 @@ template {
 
 html {
     font-family: $base-font-family; /* 1 */
-    @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-        font-size: 100% * ($base-font-size / 16px); /* 3 */
-    }
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
-
-    @if not $strict-normalize {
-        /* Establish a vertical rhythm unit using $base-line-height. */
-        @include adjust-leading-to(1);
-    }
 }
 
 @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
@@ -182,21 +166,13 @@ a:hover {
    Typography
    ========================================================================== */
 
-@if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    /**
-     * Set 1 unit of vertical rhythm on the top and bottom margin.
-     */
 
-    p,
-    pre {
-        margin: rhythm(1) 0;
-    }
-
-    blockquote {
-        /* Set 1 unit of vertical rhythm on the top and bottom margin. */
-        margin: rhythm(1) $indent-amount;
-    }
+blockquote {
+    /* Set 1 unit of vertical rhythm on the top and bottom margin. */
+    margin-left: $indent-amount;
+    margin-right: $indent-amount;
 }
+
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
@@ -204,49 +180,27 @@ a:hover {
  */
 
 h1 {
-    /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-    @if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-        @include adjust-font-size-to( $h1-font-size );
-    }
-    @else {
-        font-size: 1em * ($h1-font-size / $base-font-size);
-    }
-
-    /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-    @include leader(1, $h1-font-size);
-    @include trailer(1, $h1-font-size);
+    font-size: 1em * ($h1-font-size / $base-font-size);
 }
 
-@if not $strict-normalize or $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    h2 {
-        @include adjust-font-size-to( $h2-font-size );
-        @include leader(1, $h2-font-size);
-        @include trailer(1, $h2-font-size);
-    }
+h2 {
+    font-size: 1em * ($h2-font-size / $base-font-size);
+}
 
-    h3 {
-        @include adjust-font-size-to( $h3-font-size );
-        @include leader(1, $h3-font-size);
-        @include trailer(1, $h3-font-size);
-    }
+h3 {
+    font-size: 1em * ($h3-font-size / $base-font-size);
+}
 
-    h4 {
-        @include adjust-font-size-to( $h4-font-size );
-        @include leader(1, $h4-font-size);
-        @include trailer(1, $h4-font-size);
-    }
+h4 {
+    font-size: 1em * ($h4-font-size / $base-font-size);
+}
 
-    h5 {
-        @include adjust-font-size-to( $h5-font-size );
-        @include leader(1, $h5-font-size);
-        @include trailer(1, $h5-font-size);
-    }
+h5 {
+    font-size: 1em * ($h5-font-size / $base-font-size);
+}
 
-    h6 {
-        @include adjust-font-size-to( $h6-font-size );
-        @include leader(1, $h6-font-size);
-        @include trailer(1, $h6-font-size);
-    }
+h6 {
+    font-size: 1em * ($h6-font-size / $base-font-size);
 }
 
 /**
@@ -261,8 +215,7 @@ abbr[title] {
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 
-b,
-strong {
+b, strong {
     font-weight: bold;
 }
 
@@ -279,7 +232,6 @@ dfn {
  */
 
 hr {
-    @include box-sizing(content-box);
     height: 0;
 }
 
@@ -296,20 +248,9 @@ mark {
  * Correct font family set oddly in Safari 5 and Chrome.
  */
 
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
     font-family: monospace, serif;
-    @if $legacy-support-for-ie6 {
-        _font-family: 'courier new', monospace;
-    }
-    @if $strict-normalize {
-        font-size: 1em;
-    }
-    @else {
-        @include adjust-font-size-to( $base-font-size );
-    }
+    font-size: 1em;
 }
 
 /**
@@ -317,14 +258,7 @@ samp {
  */
 
 pre {
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-        white-space: pre;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
-    @else {
-        white-space: pre-wrap;
-    }
+    white-space: pre-wrap;
 }
 
 /**
@@ -347,8 +281,7 @@ small {
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
 
-sub,
-sup {
+sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -376,7 +309,7 @@ sub {
     menu,
     ol,
     ul {
-        margin: rhythm(1) 0;
+        margin: 0.875em 0;
     }
 
     @if not $strict-normalize {
@@ -404,17 +337,13 @@ sub {
     }
 }
 
-@if $legacy-support-for-ie7 {
-    /**
-     * Correct list images handled incorrectly in IE 7.
-     */
 
-    nav ul,
-    nav ol {
-        list-style: none;
-        list-style-image: none;
-    }
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
 }
+
 
 /* ==========================================================================
    Embedded content
@@ -426,10 +355,6 @@ sub {
 
 img {
     border: 0;
-    @if $legacy-support-for-ie7 {
-        /* Improve image quality when scaled in IE 7. */
-        -ms-interpolation-mode: bicubic;
-    }
 }
 
 /**
@@ -456,15 +381,6 @@ figure {
    Forms
    ========================================================================== */
 
-@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    /**
-     * Correct margin displayed oddly in IE 6/7.
-     */
-
-    form {
-        margin: 0;
-    }
-}
 
 /**
  * Define consistent border, margin, and padding.
@@ -474,10 +390,6 @@ fieldset {
     margin: 0 2px;
     /* Apply borders and padding that keep the vertical rhythm. */
     border-color: #c0c0c0;
-    @include apply-side-rhythm-border(top,    $width: 1px, $lines: 0.35);
-    @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65);
-    @include apply-side-rhythm-border(left,  $width: 1px, $lines: 0.625);
-    @include apply-side-rhythm-border(right, $width: 1px, $lines: 0.625);
 }
 
 /**
@@ -489,9 +401,6 @@ fieldset {
 legend {
     border: 0; /* 1 */
     padding: 0; /* 2 */
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-        *margin-left: -7px; /* 3 */
-    }
 }
 
 /**
@@ -508,10 +417,6 @@ textarea {
     font-family: inherit; /* 1 */
     font-size: 100%; /* 2 */
     margin: 0; /* 3 */
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-        vertical-align: baseline; /* 4 */
-        *vertical-align: middle; /* 4 */
-    }
 }
 
 /**
@@ -552,9 +457,7 @@ input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
-    @if $legacy-support-for-ie7 {
-        *overflow: visible; /* 4 */
-    }
+
 }
 
 /**
@@ -575,12 +478,7 @@ html input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-    @include box-sizing(border-box); /* 1 */
     padding: 0; /* 2 */
-    @if $legacy-support-for-ie7 {
-        *height: 13px; /* 3 */
-        *width: 13px; /* 3 */
-    }
 }
 
 /**
@@ -591,7 +489,6 @@ input[type="radio"] {
 
 input[type="search"] {
     -webkit-appearance: textfield; /* 1 */
-    @include box-sizing(content-box); /* 2 */
 }
 
 /**
