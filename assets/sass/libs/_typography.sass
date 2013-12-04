@@ -7,15 +7,42 @@
 
 // h1, h2, h3, h4, h5, h6
 
+h1
+	font-size: 1em * ($h1-font-size / $base-font-size)
+
+h2
+	font-size: 1em * ($h2-font-size / $base-font-size)
+
+h3
+	font-size: 1em * ($h3-font-size / $base-font-size)
+
+h4
+	font-size: 1em * ($h4-font-size / $base-font-size)
+
+h5
+	font-size: 1em * ($h5-font-size / $base-font-size)
+
+h6
+	font-size: 1em * ($h6-font-size / $base-font-size)
+
 // p, pre, label
 
-// ol, ul
+pre
+	white-space: pre-wrap
+
+// ol, ul, dl
 
 li
 	line-height: auto
 
-small
-	font-size: $small-font-size
+dl, menu, ol, ul
+	margin: 0.875em 0
+
+dd
+	margin: 0 0 0 $indent-amount
+
+ol, ul
+	padding: 0 0 0 $indent-amount
 
 
 // ========= Core Typography =========
@@ -27,14 +54,37 @@ strong, b
 em, i, q
 	font-style: italic
 
+q
+    quotes: "\201C" "\201D" "\2018" "\2019"
+
 blockquote
-	padding-left: 1rem
 	border-left: 0.25 solid $secondary
 	line-height: normal
-	margin: 0
+	margin-left: $indent-amount;
+    margin-right: $indent-amount;
 	p
 		font-style: italic
 		margin: 0
+
+sub, sup 
+    font-size: 75%
+    line-height: 0
+    position: relative
+    vertical-align: baseline
+sup 
+    top: -0.5em
+    
+sub
+    bottom: -0.25em
+
+small
+	font-size: $small-font-size
+
+code, kbd, pre, samp
+    font-family: monospace, serif
+    font-size: 1em
+
+
 
 // ========= Lining Lists =========
 

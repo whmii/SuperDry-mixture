@@ -111,19 +111,6 @@ html {
     -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    /**
-     * Address `font-family` inconsistency between `textarea` and other form
-     * elements.
-     */
-
-    button,
-    input,
-    select,
-    textarea {
-        font-family: $base-font-family;
-    }
-}
 
 /**
  * Remove default margin.
@@ -179,29 +166,29 @@ blockquote {
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 
-h1 {
-    font-size: 1em * ($h1-font-size / $base-font-size);
-}
+// h1 {
+//     font-size: 1em * ($h1-font-size / $base-font-size);
+// }
 
-h2 {
-    font-size: 1em * ($h2-font-size / $base-font-size);
-}
+// h2 {
+//     font-size: 1em * ($h2-font-size / $base-font-size);
+// }
 
-h3 {
-    font-size: 1em * ($h3-font-size / $base-font-size);
-}
+// h3 {
+//     font-size: 1em * ($h3-font-size / $base-font-size);
+// }
 
-h4 {
-    font-size: 1em * ($h4-font-size / $base-font-size);
-}
+// h4 {
+//     font-size: 1em * ($h4-font-size / $base-font-size);
+// }
 
-h5 {
-    font-size: 1em * ($h5-font-size / $base-font-size);
-}
+// h5 {
+//     font-size: 1em * ($h5-font-size / $base-font-size);
+// }
 
-h6 {
-    font-size: 1em * ($h6-font-size / $base-font-size);
-}
+// h6 {
+//     font-size: 1em * ($h6-font-size / $base-font-size);
+// }
 
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
@@ -215,9 +202,9 @@ abbr[title] {
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 
-b, strong {
-    font-weight: bold;
-}
+// b, strong {
+//     font-weight: bold;
+// }
 
 /**
  * Address styling not present in Safari 5 and Chrome.
@@ -248,53 +235,53 @@ mark {
  * Correct font family set oddly in Safari 5 and Chrome.
  */
 
-code, kbd, pre, samp {
-    font-family: monospace, serif;
-    font-size: 1em;
-}
+// code, kbd, pre, samp {
+//     font-family: monospace, serif;
+//     font-size: 1em;
+// }
 
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
 
-pre {
-    white-space: pre-wrap;
-}
+// pre {
+//     white-space: pre-wrap;
+// }
 
 /**
  * Set consistent quote types.
  */
 
-q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
-}
+// q {
+//     quotes: "\201C" "\201D" "\2018" "\2019";
+// }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 
-small {
-    font-size: 80%;
-}
+// small {
+//     font-size: 80%;
+// }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
 
-sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
+// sub, sup {
+//     font-size: 75%;
+//     line-height: 0;
+//     position: relative;
+//     vertical-align: baseline;
+// }
 
-sup {
-    top: -0.5em;
-}
+// sup {
+//     top: -0.5em;
+// }
 
-sub {
-    bottom: -0.25em;
-}
+// sub {
+//     bottom: -0.25em;
+// }
 
 /* ==========================================================================
    Lists

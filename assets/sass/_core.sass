@@ -30,14 +30,27 @@ body
 	font-size: $base-font-size
 	background-color: whitesmoke
 	padding: 3em
+	margin: 0
 
+// Link Styles
 a 
 	color: $action
+	background: transparent
 	&:hover, &:focus, &:active 
 		color: $action-respond
+	&:active, &:hover
+		outline: 0
+	&:focus
+		outline: thin dotted
+
+hr
+    height: 0
+
+abbr[title]
+ 	border-bottom: 1px dotted
 
 
-// example grid styles
+// Example Grid Styles
 
 .wrap-page-section
 	color: blue
