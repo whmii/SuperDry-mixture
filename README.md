@@ -1,18 +1,16 @@
-# Zongzi 粽子
+# SuperDry
 
-Zongzi is a boilerplate workflow for Mixture.io with Autoprefixer!
+SuperDry is a boilerplate workflow for Mixture.io with Autoprefixer!
 Incorporated modules include structure from Sassaparrilla and Normalize as well as an abstraction Foundation 4 (soon to be 5) mixin-based media quires and grid system. Also
 
-Zongzi also contains ResponsiveSlides.js for a quick slide-show implementation. Because who doesn't love a slideshow.
+SuperDry also contains ResponsiveSlides.js for a quick slide-show implementation. Because who doesn't love a slideshow.
 
-Zongzi is not designed to be a tight and focused implementation that can be rapidly built upon and scaled. Stylesheets are `3kb` minified.
-
-Might rename this Garrett or SuperDry.
+SuperDry is not designed to be a tight and focused implementation that can be rapidly built upon and scaled. Stylesheets are `3kb` minified.
 
 
 ## Components
 
-Component=factor+ratio
+Component = factor + ratio
 
 ### Factor
 
