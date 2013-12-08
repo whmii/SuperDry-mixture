@@ -51,6 +51,8 @@ dd
 ol, ul
 	padding: 0 0 0 $indent-amount
 
+nav ul
+	@include lining()
 
 // ========= Core Typography =========
 
@@ -91,49 +93,3 @@ code, kbd, pre, samp
 	font-family: monospace, serif
 	font-size: 1em
 
-
-
-// ========= Lining Lists =========
-
-// Lining declares an inline list for ul, ol and dl
-
-@mixin lining($type:ul)
-	@if ($type == ul)
-		list-style: none
-		li
-			display: inline-block
-	@if ($type == ol)
-		// bullets are removed for inline ul but not for ol!
-		li
-			display: inline-block
-	@if ($type == dl)
-		dt,dd
-			display: inline
-			margin: 0
-		
-		dt,dd
-			& + dt
-				&:before
-					content: "\A"
-					white-space: pre
-
-// Mixins for list style types
-
-@mixin unordered
-	list-style-position: outside
-	list-style-type: disc
-
-@mixin unordered-inside 
-	list-style-position: inside
-	list-style-type: disc
-
-@mixin ordered
-	list-style-position: outside
-	list-style-type: decimal
-
-@mixin ordered-inside
-	list-style-position: inside
-	list-style-type: decimal
-
-@mixin nobullet
-	list-style-type: none
