@@ -16,10 +16,6 @@ $em-base: 16px !default
 $base-font-size: 1em 				// Browser default size
 $base-line-height: 1.5
 
-
-// Small Print
-$small-font-size: 65%
-
 // Font sizes are then abstracted to global spacing behaviors
 
 $base-spacing-unit: $base-line-height
@@ -73,9 +69,9 @@ $base-font-size: 16px
 
 //========= Grid Variables =========
 
-$default-float: left !default
+$default-float: left
 $text-direction : ltr 
-$opposite-direction: right !default
+$opposite-direction: right
 @if $text-direction == ltr 
 	$default-float: left
 	$opposite-direction: right
@@ -108,7 +104,30 @@ $landscape: "only screen and (orientation: landscape)" !default
 $portrait: "only screen and (orientation: portrait)" !default
 
 
-//========= Color Palette =========
+//========= Core Settings =========
+
+$h1-font-size: em-calc(44)
+
+$h2-font-size: em-calc(37)
+
+$h3-font-size: em-calc(27)
+
+$h4-font-size: em-calc(23)
+
+$h5-font-size: em-calc(18)
+
+$h6-font-size: em-calc(16)
+
+
+// Small Print
+$small-font-size: 65%
+
+
+// Indentation for dl, ul, blockquote
+$indent-amount: 1em
+
+
+//========= Color Settings =========
 
 $primary: #666
 $secondary: #222
@@ -135,13 +154,6 @@ $secondary-action-respond: $action
 
 $alert: red
 $success: green
-
-
-
-//========= Core Settings =========
-
-
-
 
 
 //========= Component Settings =========
