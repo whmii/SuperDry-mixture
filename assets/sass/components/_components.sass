@@ -48,6 +48,7 @@ $base-component-ratio: component-ratio()
 // ========= Component Mixin =========
 
 // @mixin component( $orientation: $default, $factor: $base-component-factor, $ratio: ,$margin:true)
+
 @mixin component($factor: $base-component-factor, $ratio: $base-component-ratio, $margin: true)
 	$local-factor: component-factor($factor)
 	$horz: $component-unit-horz * $local-factor
@@ -83,10 +84,6 @@ $base-component-ratio: component-ratio()
 		@if $margin == false
 			margin-top: 0
 			margin-bottom: 0
-
-
-.otherrandomthing
-	@include component()
 
 
 // ========= Helper Styles =========
