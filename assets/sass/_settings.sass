@@ -5,16 +5,15 @@
 
 //========= Typography & Metrics =========
 
-// $base-line-height is 24px while $base-font-size is 16px
-$base-line-height: 150% !default
-
 // This is the default html and body font-size for the base em value.
-$em-base: 16px !default
+$em-base: 16px
+
 
 // Fonts size and line height defaults for our calculations
 
 $base-font-size: 1em 				// Browser default size
 $base-line-height: 1.5
+
 
 // Font sizes are then abstracted to global spacing behaviors
 
@@ -67,15 +66,10 @@ $portrait: "only screen and (orientation: portrait)" !default
 //========= Core Settings =========
 
 $h1-font-size: em-calc(44)
-
 $h2-font-size: em-calc(37)
-
 $h3-font-size: em-calc(27)
-
 $h4-font-size: em-calc(23)
-
 $h5-font-size: em-calc(18)
-
 $h6-font-size: em-calc(16)
 
 
@@ -89,37 +83,32 @@ $indent-amount: 1em
 
 //========= Color Settings =========
 
-$primary: #666
-$secondary: #222
+$primary: #d34836
+$secondary: #d2d2d2
 $tertiary: #444
 
 
-// Assign colours to variable roles
+// Primary roles
 
 $base-color: #2b2b2b
 $base-bg: whitesmoke
 $heading-color: $secondary
 $secondary-heading-color: $tertiary
+$alert: red
+$success: green
 
 
 // Links
 
 $action: $primary
-$action-respond: $secondary
-$secondary-action: $action-respond
-$secondary-action-respond: $action
-
-
-// Alerts, errors and UI interface
-
-$alert: red
-$success: green
+$action-alt: darken($primary,8%)
 
 
 //========= Component Settings =========
 
 $base-component-factor: 0 !default
 $base-factor-modifier: 0.5 !default
+
 
 // Core Spacing Variables
 
@@ -129,8 +118,14 @@ $island: 4rem
 $continent: 8rem
 
 
+// Transition Variables
+
+$global-transition-speed: 200ms
+$global-transition-function: ease
+
+
 // Border Variables
 
-$global-radius: 4px				// I aint afraid of no' pixels!
+$global-radius: 2px				// I aint afraid of no' pixels!
 $global-border-width: 1px
 
