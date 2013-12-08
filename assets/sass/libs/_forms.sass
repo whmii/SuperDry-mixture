@@ -6,6 +6,11 @@
 label, select
 	display: block
 
+input, button, select, textarea
+	font-family: inherit
+	font-size: 100%
+	margin: 0
+
 input[type="search"]
 	-webkit-appearance: textfield
 	box-sizing: content-box
@@ -63,3 +68,14 @@ input[type="checkbox"]:focus
 	outline: thin dotted #333
 	outline: 5px auto -webkit-focus-ring-color
 	outline-offset: -2px
+
+fieldset
+	margin: 0 2px
+	border-color: #c0c0c0
+
+legend
+	border: 0
+	padding: 0
+
+button[disabled], html input[disabled]
+	cursor: default
