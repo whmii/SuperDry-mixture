@@ -1,0 +1,44 @@
+
+// Project Functions
+// ============================================================
+
+// It strips the unit of measure and returns it
+
+@function strip-unit($num)
+	@return $num / ($num * 0 + 1)
+
+@function convert-to-em($value, $base-value: $em-base)  
+	$value: strip-unit($value) / strip-unit($base-value) * 1em
+	@if ($value == 0em)
+		$value: 0
+	@return $value
+
+@function em-calc($values, $base-value: $em-base)
+	$max: length($values)
+
+	@if $max == 1
+		@return convert-to-em(nth($values, 1), $base-value)
+
+	$emValues: ()
+	@for $i from 1 through $max
+		$emValues: append($emValues, convert-to-em(nth($values, $i), $base-value))
+	@return $emValues
+
+@function emify($target, $context)
+	@if $target == 0 
+		@return 0
+	@return $target / $context + 0em
+
+// Make px to ems using base-font-size
+// echo as: font-size: em-font(#px)
+
+@function em-font($target, $context: $base-font-size)
+	@return emify($target, $context)
+
+
+
+// Make px to ems using base-line-height
+// echo as: font-size: em-base(#px)
+
+@function em-base($target, $context: $base-line-height)
+	@return emify($target, $context)
