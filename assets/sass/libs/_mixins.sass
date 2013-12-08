@@ -16,3 +16,7 @@
 		overflow: hidden
 	&:after
 		clear: both
+
+
+@mixin transition( $property:all, $speed:$global-transition-speed, $function: $global-transition-function)
+	transition: $property $speed $function
