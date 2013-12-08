@@ -32,7 +32,7 @@ body
 	color: $base-color
 	font-family: Helvetica, Arial, sans-serif
 	font-size: $base-font-size
-	background-color: whitesmoke
+	background-color: $base-bg
 	padding: 3em
 	margin: 0
 
@@ -42,7 +42,7 @@ a
 	color: $action
 	background: transparent
 	&:hover, &:focus, &:active 
-		color: $action-respond
+		color: $action-alt
 	&:active, &:hover
 		outline: 0
 	&:focus
@@ -69,7 +69,6 @@ table
 // Example Grid Styles
 
 .wrap-page-section
-	color: blue
 	& > section 
 		@include grid-row
 		& > aside
