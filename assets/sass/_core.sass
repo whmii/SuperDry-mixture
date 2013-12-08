@@ -55,6 +55,10 @@ hr
 abbr[title]
 	border-bottom: 1px dotted
 
+img
+	display: inline-block
+	max-width: 100%
+
 img, a img
 	border: 0
 
@@ -71,10 +75,21 @@ table
 .wrap-page-section
 	& > section 
 		@include grid-row
+		@extend %island
 		& > aside
-			@include grid-column($columns:4)
+			@include grid-column($columns:12)
 		& > article
-			@include grid-column($columns:8)
+			@include grid-column($columns:12)
+		@media #{$small}
+			& > aside
+				@include grid-column($columns:6)
+			& > article
+				@include grid-column($columns:6)
+		@media #{$medium}
+			& > aside
+				@include grid-column($columns:4)
+			& > article
+				@include grid-column($columns:8)
 
 @media #{$screen}
 
