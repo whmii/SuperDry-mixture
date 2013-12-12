@@ -38,8 +38,8 @@ $base-factor-modifier: 0.5 !default
 // $column-gutter  /  $base-line-height
 
 @function component-ratio($vertical: $component-unit-vert, $horizontal: $component-unit-horz)
-	@if unit($horizontal) != "em" 	// Sanity check in case margins were not defined in ems
-		$horizontal: em-calc($horizontal)
+	@if unit($horizontal) != "rem" 	// Sanity check in case margins were not defined in rems
+		$horizontal: rem-calc($horizontal)
 	@return (strip-unit($vertical)/strip-unit($horizontal))
 
 $base-component-ratio: component-ratio()
@@ -89,6 +89,12 @@ $base-component-ratio: component-ratio()
 // ========= Helper Styles =========
 
 // Spacing Helpers
+
+.test
+	component-unit-vert: $component-unit-vert
+	column-gutter: $column-gutter
+	component-factor: component-factor()
+	component-ratio: component-ratio()
 
 %coral
 	margin-top: $coral
