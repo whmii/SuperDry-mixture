@@ -76,17 +76,18 @@ table
 	& > section 
 		@include grid-row
 		@extend %island
-		& > aside
+		& > h1
 			@include grid-column($columns:12)
+			text-align: center
 		& > article
 			@include grid-column($columns:12)
 		@media #{$small}
-			& > aside
+			& > h1
 				@include grid-column($columns:6)
 			& > article
 				@include grid-column($columns:6)
 		@media #{$medium}
-			& > aside
+			& > h1
 				@include grid-column($columns:4)
 			& > article
 				@include grid-column($columns:8)
