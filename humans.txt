@@ -16,7 +16,7 @@
   Software: Mixture.io, Sublime Text, Transmit, Git
 
 
-/* Zongzi 粽子 was made by Will McMahan @WHMII and derived with portions of Foundation by ZURB and Sassaparilla by fffunction, for Mixture */
+/* SuperDry was made by Will McMahan @WHMII and derived with portions of Foundation by ZURB and Sassaparilla by fffunction, for Mixture */
 /* mcmahan.me */
 
 /* Mixture. The perfect front-end development tool for Mac & Windows. */
