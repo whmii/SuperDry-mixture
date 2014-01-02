@@ -1,4 +1,4 @@
-# SuperDry
+# SuperDry for Mixture.io
 
 SuperDry is a boilerplate workflow for Mixture.io with Autoprefixer!
 Incorporated modules include structure from Sassaparrilla and Normalize as well as an abstraction Foundation 4 (soon to be 5) mixin-based media quires and grid system. Also
