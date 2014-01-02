@@ -1,12 +1,11 @@
-# SuperDry for Mixture.io
+# SuperDry
 
-SuperDry is a boilerplate workflow for Mixture.io with Autoprefixer!
-Incorporated modules include structure from Sassaparrilla and Normalize as well as an abstraction Foundation 4 (soon to be 5) mixin-based media quires and grid system. Also
+SuperDry is a boilerplate workflow for use with Grunt Sass and Autoprefixer!
+Incorporated modules include structure from Sassaparrilla and Normalize as well as an abstraction Foundation 5 mixin-based media quires and grid system.
 
 SuperDry also contains ResponsiveSlides.js for a quick slide-show implementation. Because who doesn't love a slideshow.
 
-SuperDry is not designed to be a tight and focused implementation that can be rapidly built upon and scaled. Stylesheets are `3kb` minified.
-
+SuperDry is designed to be a tight and focused implementation that can be rapidly built upon and scaled.
 
 ## Components
 
@@ -36,6 +35,5 @@ While base styles for items like buttons and panels have been added, they are pr
 
 ## Ref
 
-* http://docs.mixture.io/
 * http://foundation.zurb.com/docs/components/grid.html
 * http://responsiveslides.com/
